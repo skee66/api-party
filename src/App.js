@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Github from './Github'
+import GW2 from './GW2'
 
 class App extends Component {
   render() {
@@ -20,11 +21,12 @@ class App extends Component {
               <NavLink to='/nasa'>NASA API</NavLink>
             </li>
             <li>
-              <NavLink to='/Homework'>Homework</NavLink>
+              <NavLink to='/GW2'>Guild Wars 2 Achievement API</NavLink>
             </li>
           </ul>
         </div>
         <Switch>
+          <Route path='/GW2' component={GW2} />
           <Route path='/github' component={Github} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
